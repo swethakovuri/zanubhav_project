@@ -1,0 +1,18 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.infy.fiori.controller.View1"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="My fiori app">
+		<headerContent>
+			<Button icon="sap-icon://action" tooltip="next action" press="onNext"></Button>
+		</headerContent>
+		<content>
+			<Button text="next" press="onNext"></Button>
+			<SearchField id="mySearch" search="OnSearch"></SearchField>
+			<List id="idLedo" items="{/fruits}" mode="Delete" delete="onDelete" itemPress="onItemPress">
+				<items>
+					<ObjectListItem type="Navigation" title="{name}" intro="{color}"
+					                number="{price}" numberUnit="{unit}"></ObjectListItem>
+				</items>
+			</List>
+		</content>
+	</Page>
+</mvc:View>

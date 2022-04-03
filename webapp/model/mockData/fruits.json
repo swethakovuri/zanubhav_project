@@ -1,0 +1,49 @@
+{
+	"fruits": [{
+			"name": "Banana",
+			"price": 10,
+			"unit": "PC",
+			"availablility": "available",
+			"color": "yellow"
+
+		},
+		{
+			"name": "Apple",
+			"price": 20,
+			"unit": "PC",
+			"availablility": "available",
+			"color": "red"
+		},
+		{
+			"name": "orange",
+			"price": 30,
+			"unit": "PC",
+			"availablility": "available",
+			"color": "orange"
+		}
+
+	],
+
+	"suppliers": [{
+			"name": "Johnson",
+			"city": "Hyderabad",
+			"contactperson": "Ravi",
+			"contactnumber": "98887655345",
+			"speciality": "Caterer"
+		},
+		{
+			"name": "RMR",
+			"city": "Delhi",
+			"contactperson": "Rai",
+			"contactnumber": "988876555",
+			"speciality": "Motors"
+		},
+		{
+			"name": "tata",
+			"city": "Mumbai",
+			"contactperson": "karen",
+			"contactnumber": "988876555",
+			"speciality": "Phones"
+		}
+	]
+}

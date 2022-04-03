@@ -1,0 +1,107 @@
+{
+	"sap.app": {
+		"version": "1.10.0",
+		"_version": "1.3.0",
+		"id": "com.infy.fiori",
+		"type": "application",
+		"applicationVersion": {
+			"version": ""
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDesc}}",
+		"tags": {
+			"keywords": ["{{keyword1}}"]
+		},
+		"ach": "FIN-ACC-AR"
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_belize", "sap_bluecrystal"]
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"dependencies": {
+			"minUI5Version": "1.70",
+			"libs": {
+				"sap.m": {
+					"minVersion": "1.70.0"
+				},
+				"sap.ui.layout": {
+					"minVersion": "1.70"
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": false,
+			"cozy": false
+		},
+		"resources": {
+			"css": [{
+				"uri": "mystyle.css",
+				"id": ""
+			}]
+		},
+		"models": {
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/mockData/fruits.json",
+				"preload": false
+			},
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {},
+				"uri": "i18n/i18n.properties",
+				"preload": false,
+				"async": true
+			}
+		},
+		"rootView": {
+			"viewName": "com.infy.fiori.view.App",
+			"type": "XML",
+			"id": "idApp"
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.infy.fiori.view",
+				"controlId": "Myapp"
+			},
+			"routes": [{
+				"name": "Route1",
+				"pattern": "",
+				"target":[ "tar1", "tar2"]
+			},
+			{ "name": "Route2",
+			   "pattern":"joker/{fruitId}",
+			   "target":["tar1","tar3"]
+			}
+			],
+			"targets": {
+				"tar1": {
+					"viewName": "View1",
+					"controlAggregation": "masterPages"
+				},
+				"tar2": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "lastView",
+					"controlAggregation": "detailPages"
+				},
+				"tar3":{
+					"viewName": "View2",
+					"controlAggregation": "detailPages"
+				}
+			}
+		}
+	},
+	"_version": "1.9.0"
+}

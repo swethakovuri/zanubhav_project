@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script src="http://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+		        data-sap-ui-libs="sap.m"
+		        data-sap-ui-theme="sap_bluecrystal"
+		        data-sap-ui-resourceRoots='{
+		        "com.infy.fiori":"./"
+		        }'
+		        data-sap-ui-bindingSyntax="complex"></script>
+		        <script>
+		        
+		        var oCompContainer = new sap.ui.core.ComponentContainer({
+		        	name: 'com.infy.fiori'
+		        });
+		        
+		        oCompContainer.placeAt("content");
+		       
+		        </script>
+	</head>
+	<body>
+		<div id="content"></div>
+	</body>
+</html>
